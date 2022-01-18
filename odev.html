@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black{
+            background-color: rgb(34, 31, 31);
+        }
+        .text1{
+            
+            position: relative;
+            text-align: center;
+            color: #e98208;
+            font-size: 50px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            letter-spacing: 7px;
+                    }
+        
+    </style>
+</head>
+<body >
+    
+
+    
+    
+
+
+    <script>
+        var tarih=new Date();
+        var yil=tarih.getFullYear();
+        var ay=tarih.getMonth();
+        var gun=tarih.getDay();
+        var saat=tarih.getHours();
+        var dakika=tarih.getMinutes();
+        var saniye=tarih.getSeconds();
+ 
+    
+        let name  = prompt("Adınızı giriniz")
+        let yazı= ` Merhaba  ${name} Hoşgeldin! ${gun}. ${ay}. ${yil} 
+        ${saat} : ${dakika} : ${saniye} tarihinde kodluyoruz ilk javascript ödevindesiniz. `
+        if(name != null){
+            document.write(yazı);
+            document.querySelector("body").classList.add('bg-black' , 'text1');
+            let info= document.querySelector('#info')
+            info.innerHTML= yazı
+        }
+       
+        
+    </script>
+        
+   
+</body>
+</html>
